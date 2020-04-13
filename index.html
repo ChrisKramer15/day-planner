@@ -20,92 +20,130 @@
     <p id="currentDay" class="lead"></p>
   </header>
   <div class="container">
-    <div class="row">
+    <div class="row time-block">
       <section class="hour">
         09:00
       </section>
-        <textarea name="nine" class="time-block" cols="110" rows="3"></textarea>
+        <textarea name="nine" class="light" id="9" cols="110" rows="3"></textarea>
       <button class="saveBtn">
       </button>
     
     </div>
-    <div class="row">
+    <div class="row time-block">
       <section class="hour">
         10:00
       </section>
-        <textarea name="ten" class="time-block" cols="110" rows="3"></textarea>
+        <textarea name="ten" class="light" id="10" cols="110" rows="3"></textarea>
       <button class="saveBtn">
       </button>
     
     </div>
-    <div class="row">
+    <div class="row time-block">
       <section class="hour">
         11:00
       </section>
-        <textarea name="eleven" class="time-block" cols="110" rows="3"></textarea>
+        <textarea name="eleven" class="light" id="11" cols="110" rows="3"></textarea>
       <button class="saveBtn">
       </button>
     
     </div>
-    <div class="row">
+    <div class="row time-block">
       <section class="hour">
         12:00
       </section>
-        <textarea name="twelve" class="time-block" cols="110" rows="3"></textarea>
+        <textarea name="twelve" class="light" id="12" cols="110" rows="3"></textarea>
       <button class="saveBtn">
       </button>
     
     </div>
-    <div class="row">
+    <div class="row time-block">
       <section class="hour">
         13:00
       </section>
-        <textarea name="one" class="time-block" cols="110" rows="3"></textarea>
+        <textarea name="one" class="light" id="13" cols="110" rows="3"></textarea>
       <button class="saveBtn">
       </button>
     
     </div>
-    <div class="row">
+    <div class="row time-block">
       <section class="hour">
         14:00
       </section>
-        <textarea name="two" class="time-block" cols="110" rows="3"></textarea>
+        <textarea name="two" class="light" id="14" cols="110" rows="3"></textarea>
       <button class="saveBtn">
       </button>
     
     </div>
-    <div class="row">
+    <div class="row time-block">
       <section class="hour">
         15:00
       </section>
-        <textarea name="three" class="time-block" cols="110" rows="3"></textarea>
+        <textarea name="three" class="light" id="15" cols="110" rows="3"></textarea>
       <button class="saveBtn">
       </button>
-    
+      
+
+
     </div>
-    <div class="row">
+    <div class="row time-block">
       <section class="hour">
         16:00
       </section>
-        <textarea name="four" class="time-block" cols="110" rows="3"></textarea>
+        <textarea name="four" class="light" id="16" cols="110" rows="3">
+        </textarea>
       <button class="saveBtn">
       </button>
     
     </div>
-    <div class="row">
+    <div class="row time-block">
       <section class="hour">
         17:00
       </section>
-        <textarea name="five" class="time-block" cols="110" rows="3"></textarea>
+        <textarea name="five" class="light" id="17" cols="110" rows="3"></textarea>
       <button class="saveBtn">
       </button>
     
     </div>
+    <div class="row time-block">
+      <section class="hour">
+        18:00
+      </section>
+        <textarea name="6" class="light" id="18" cols="110" rows="3"></textarea>
+      <button class="saveBtn">
+      </button>
     
+    </div>
+    <div class="row time-block">
+      <section class="hour">
+        19:00
+      </section>
+        <textarea name="7" class="light" id="19" cols="110" rows="3"></textarea>
+      <button class="saveBtn">
+      </button>
+    
+    </div>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script type="text/javascript">
+  $(document).ready(); {
+  var day = moment().format("dddd, MMMM Do YYYY"); 
+    $("#currentDay").append(day);
+
+    console.log(logTime);
+var time = parseInt(moment().format("H"));
+console.log(time);
+
+var data = localStorage.getItem(".saveBtn");
+$(".saveBtn").on("click", function (event) {
+  event.preventDefault();
+  localStorage.setItem(".light", data);
+  });
+
+
+  }
+  </script>
 </body>
 
 </html>
