@@ -1,149 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Work Day Scheduler</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-  <title>Work Day Scheduler</title>
-</head>
+  <body>
+    <header class="jumbotron">
+      <h1 class="display-3">Work Day Scheduler</h1>
+      <p class="lead">A simple calendar app for scheduling your work day</p>
+      <p id="currentDay" class="lead"></p>
+    </header>
 
-<body>
-  <header class="jumbotron">
-    <h1 class="display-3">Work Day Scheduler</h1>
-    <p class="lead">A simple calendar app for scheduling your work day</p>
-    <p id="currentDay" class="lead"></p>
-  </header>
-  <div class="container">
-    <div class="row time-block">
-      <section class="hour">
-        09:00
-      </section>
-        <textarea name="nine" class="light" id="9" cols="110" rows="3"></textarea>
-      <button class="saveBtn">
-      </button>
-    
+    <!-- Timeblocks go here -->
+    <div class="container plannerContainer">
+      <!-- <div class ="row">
+      </div> -->
     </div>
-    <div class="row time-block">
-      <section class="hour">
-        10:00
-      </section>
-        <textarea name="ten" class="light" id="10" cols="110" rows="3"></textarea>
-      <button class="saveBtn">
-      </button>
-    
-    </div>
-    <div class="row time-block">
-      <section class="hour">
-        11:00
-      </section>
-        <textarea name="eleven" class="light" id="11" cols="110" rows="3"></textarea>
-      <button class="saveBtn">
-      </button>
-    
-    </div>
-    <div class="row time-block">
-      <section class="hour">
-        12:00
-      </section>
-        <textarea name="twelve" class="light" id="12" cols="110" rows="3"></textarea>
-      <button class="saveBtn">
-      </button>
-    
-    </div>
-    <div class="row time-block">
-      <section class="hour">
-        13:00
-      </section>
-        <textarea name="one" class="light" id="13" cols="110" rows="3"></textarea>
-      <button class="saveBtn">
-      </button>
-    
-    </div>
-    <div class="row time-block">
-      <section class="hour">
-        14:00
-      </section>
-        <textarea name="two" class="light" id="14" cols="110" rows="3"></textarea>
-      <button class="saveBtn">
-      </button>
-    
-    </div>
-    <div class="row time-block">
-      <section class="hour">
-        15:00
-      </section>
-        <textarea name="three" class="light" id="15" cols="110" rows="3"></textarea>
-      <button class="saveBtn">
-      </button>
-      
 
-
-    </div>
-    <div class="row time-block">
-      <section class="hour">
-        16:00
-      </section>
-        <textarea name="four" class="light" id="16" cols="110" rows="3">
-        </textarea>
-      <button class="saveBtn">
-      </button>
-    
-    </div>
-    <div class="row time-block">
-      <section class="hour">
-        17:00
-      </section>
-        <textarea name="five" class="light" id="17" cols="110" rows="3"></textarea>
-      <button class="saveBtn">
-      </button>
-    
-    </div>
-    <div class="row time-block">
-      <section class="hour">
-        18:00
-      </section>
-        <textarea name="6" class="light" id="18" cols="110" rows="3"></textarea>
-      <button class="saveBtn">
-      </button>
-    
-    </div>
-    <div class="row time-block">
-      <section class="hour">
-        19:00
-      </section>
-        <textarea name="7" class="light" id="19" cols="110" rows="3"></textarea>
-      <button class="saveBtn">
-      </button>
-    
-    </div>
-  </div>
-
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-  <script type="text/javascript">
-  $(document).ready(); {
-  var day = moment().format("dddd, MMMM Do YYYY"); 
-    $("#currentDay").append(day);
-
-    console.log(logTime);
-var time = parseInt(moment().format("H"));
-console.log(time);
-
-var data = localStorage.getItem(".saveBtn");
-$(".saveBtn").on("click", function (event) {
-  event.preventDefault();
-  localStorage.setItem(".light", data);
-  });
-
-
-  }
-  </script>
-</body>
-
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
 </html>
